@@ -26,9 +26,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} bg-gray-400 text-gray-900 min-h-screen flex items-start justify-center p-4`}
       >
-        {children}
+        <div className="w-full max-w-lg sm:max-w-xl p-6 bg-white rounded-lg shadow-lg mt-8 mx-auto">
+          {/* Inner box with content */}
+          <div className="w-full p-6 bg-white rounded-lg shadow-lg">
+            {children}
+          </div>
+        </div>
       </body>
     </html>
   );
